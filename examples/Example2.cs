@@ -2,16 +2,16 @@
 using Friflo.Engine.ECS;
 using UnityEngine;
 
-namespace ExtendedSystems.examples
+namespace FrifloExt.examples
 {
     public class Example2 : MonoBehaviour
     {
-        private ExtendedSystems _systems;
+        private FrifloExt.ExtendedSystems _systems;
 
         private void Awake()
         {
             var entityStore = new EntityStore();
-            _systems = new ExtendedSystems(entityStore);
+            _systems = new FrifloExt.ExtendedSystems(entityStore);
             var systemGroup1 = new SystemGroup();
             systemGroup1.AddSystems(new ExampleTransformSystem(), new ExampleTransformSystem2());
         

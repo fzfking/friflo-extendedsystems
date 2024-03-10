@@ -1,4 +1,4 @@
-﻿namespace ExtendedSystems.Interfaces
+﻿namespace FrifloExt.Interfaces
 {
     public interface IConditionSwitch
     {

@@ -1,7 +1,7 @@
 ﻿using System.Runtime.CompilerServices;
-using ExtendedSystems.Interfaces;
+using FrifloExt.Interfaces;
 
-namespace ExtendedSystems
+namespace FrifloExt
 {
     public class ConditionalSystemGroup : SystemGroup
     {

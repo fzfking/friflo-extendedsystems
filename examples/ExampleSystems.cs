@@ -1,8 +1,8 @@
 ﻿#if UNITY_EDITOR
-using ExtendedSystems.Interfaces;
 using Friflo.Engine.ECS;
+using FrifloExt.Interfaces;
 
-namespace ExtendedSystems.examples
+namespace FrifloExt.examples
 {
     public class ExampleTransformSystem : IInitSystem, IUpdateSystem, IDestroySystem
     {

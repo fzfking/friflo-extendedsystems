@@ -1,6 +1,6 @@
-﻿using ExtendedSystems.Interfaces;
+﻿using FrifloExt.Interfaces;
 
-namespace ExtendedSystems
+namespace FrifloExt
 {
     public class SystemSwitch : IConditionSwitch
     {

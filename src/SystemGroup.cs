@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
-using ExtendedSystems.Interfaces;
 using Friflo.Engine.ECS;
+using FrifloExt.Interfaces;
 
-namespace ExtendedSystems
+namespace FrifloExt
 {
     public class SystemGroup : IInitSystem, IUpdateSystem, IDestroySystem
     {

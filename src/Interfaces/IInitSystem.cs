@@ -1,6 +1,6 @@
 ﻿using Friflo.Engine.ECS;
 
-namespace ExtendedSystems.Interfaces
+namespace FrifloExt.Interfaces
 {
     public interface IInitSystem : ISystem
     {

@@ -2,11 +2,11 @@
 using Friflo.Engine.ECS;
 using UnityEngine;
 
-namespace ExtendedSystems.examples
+namespace FrifloExt.examples
 {
     public class Example3 : MonoBehaviour
     {
-        private ExtendedSystems _systems;
+        private FrifloExt.ExtendedSystems _systems;
         private SystemSwitch _group1Switch;
         private SystemSwitch _group2Switch;
         private int _frameCounter;
@@ -14,7 +14,7 @@ namespace ExtendedSystems.examples
         private void Awake()
         {
             var entityStore = new EntityStore();
-            _systems = new ExtendedSystems(entityStore);
+            _systems = new FrifloExt.ExtendedSystems(entityStore);
             _group1Switch = new();
             _group2Switch = new();
             var systemGroup1 = new ConditionalSystemGroup(_group1Switch, 

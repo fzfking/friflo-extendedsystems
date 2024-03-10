@@ -12,7 +12,7 @@ You can download it directly as zip archive.
 # Features
 ## Systems separation through implemented interfaces
 ```c#
-namespace ExtendedSystems.examples
+namespace FrifloExt.examples
 {
     public class Example1 : MonoBehaviour
     {
@@ -66,7 +66,7 @@ namespace ExtendedSystems.examples
 ```
 ## System groups
 ```c#
-namespace ExtendedSystems.examples
+namespace FrifloExt.examples
 {
     public class Example2 : MonoBehaviour
     {
@@ -100,7 +100,7 @@ namespace ExtendedSystems.examples
 ```
 ## System switching
 ```c#
-namespace ExtendedSystems.examples
+namespace FrifloExt.examples
 {
     public class Example3 : MonoBehaviour
     {
