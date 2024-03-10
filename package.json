@@ -1,0 +1,18 @@
+﻿{
+  "name": "com.fzfking.friflo-extendedsystems",
+  "author": "fzfking",
+  "displayName": "Friflo ecs extended systems",
+  "description": "",
+  "unity": "2022.3",
+  "version": "1.0.0",
+  "keywords": [
+    "friflo",
+    "ecs",
+    "fzfking"
+  ],
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fzfking/friflo-extendedsystems.git"
+  }
+}
