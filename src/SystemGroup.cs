@@ -6,7 +6,7 @@ using FrifloExt.Interfaces;
 
 namespace FrifloExt
 {
-    public class SystemGroup : IInitSystem, IUpdateSystem, IDestroySystem
+    public class SystemGroup : ISystemGroup, IInitSystem, IUpdateSystem, IDestroySystem
     {
         private readonly List<ISystem> _systems;
         private readonly List<IUpdateSystem> _updateSystems;
