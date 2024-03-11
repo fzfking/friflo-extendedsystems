@@ -1,4 +1,5 @@
-﻿using FrifloExt.Interfaces;
+﻿using System.Runtime.CompilerServices;
+using FrifloExt.Interfaces;
 
 namespace FrifloExt
 {
@@ -11,12 +12,18 @@ namespace FrifloExt
             _conditionSwitch = conditionSwitch;
         }
         
-        /// <summary>
-        /// Override it with your custom logic and invoke base.OnUpdate at end
-        /// </summary>
-        public virtual void OnUpdate()
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public void OnUpdate()
         {
+            if (!_conditionSwitch.State)
+                return;
+            Process();
             _conditionSwitch.State = false;
         }
+
+        /// <summary>
+        /// Implement it with your custom logic
+        /// </summary>
+        protected abstract void Process();
     }
 }
