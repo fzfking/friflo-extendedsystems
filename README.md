@@ -148,3 +148,46 @@ namespace FrifloExt.examples
     }
 }
 ```
+## DelHere systems
+Can remove tags and components in needed point of systems order.
+```c#
+namespace FrifloExt.examples
+{
+    public class Example3 : MonoBehaviour
+    {
+        private FrifloExt.ExtendedSystems _systems;
+        private SystemSwitch _group1Switch;
+        private SystemSwitch _group2Switch;
+        private int _frameCounter;
+
+        private void Awake()
+        {
+            var entityStore = new EntityStore();
+            _systems = new FrifloExt.ExtendedSystems(entityStore);
+            
+            _systems
+                .AddSystem(systemGroup1)
+                .AddSystem(systemGroup2)
+                .AddGroup(new ExampleTransformSystem(), new ExampleTransformSystem2())
+                // Position will be removed after ExampleTransformSystem 
+                // and ExampleTransformSystem2 end update
+                .DelHere<Position>()
+                //After that disabled tag will be removed
+                .DelTagHere<Disabled>()
+                .Init();
+
+            _group1Switch.State = false;
+        }
+
+        private void Update()
+        {
+            _systems.Update();
+        }
+
+        private void OnDestroy()
+        {
+            _systems.Destroy();
+        }
+    }
+}
+```
