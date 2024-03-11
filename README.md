@@ -1,5 +1,6 @@
 ﻿# Friflo Extended Systems
 A different look at systems for the Friflo ecs. This extension is oriented for unity, but can be used anywhere.
+## Caution: WIP. There can be bugs. Api may change.
 # Installation
 Before all it need installed Friflo ecs.
 ## Via upm
