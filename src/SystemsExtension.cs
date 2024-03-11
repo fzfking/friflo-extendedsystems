@@ -29,18 +29,18 @@ namespace FrifloExt
             return systems;
         }
 
-        public static ISystemGroup AddGroup(this ExtendedSystems systems, params ISystem[] childSystems)
+        public static ExtendedSystems AddGroup(this ExtendedSystems systems, params ISystem[] childSystems)
         {
             var group = new SystemGroup(childSystems);
             systems.AddSystem(group);
-            return group;
+            return systems;
         }
         
-        public static ISystemGroup AddSwitchGroup(this ExtendedSystems systems, IConditionSwitch conditionSwitch, params ISystem[] childSystems)
+        public static ExtendedSystems AddSwitchGroup(this ExtendedSystems systems, IConditionSwitch conditionSwitch, params ISystem[] childSystems)
         {
             var group = new ConditionalSystemGroup(conditionSwitch, childSystems);
             systems.AddSystem(group);
-            return group;
+            return systems;
         }
     }
 }
